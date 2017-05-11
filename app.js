@@ -7,6 +7,6 @@ function Project (name, gitUrl, date, imageUrl){
   this.imageUrl = imageUrl;
 }
 
-$('.hamburger').on('click', function(){
-  $('.navButton').css('display', 'inline-block');
+$('#hamburger').on('click', function(){
+  $('.navButton').toggleClass('is-expanded');
 });

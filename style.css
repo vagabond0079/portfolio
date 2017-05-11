@@ -1,24 +1,27 @@
-/*Reset*/
+/* Base / Reset */
 
 *{
- margin:0;
- padding: 0;
- box-sizing: border-box;
- /*border: 1px solid black;*/
-
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .clear-fix{
- clear:both;
+  clear:both;
 }
+
 html, body {
- height: 100%;
+  height: 100%;
 }
+
 body{
- margin:0 auto;
+  margin:0 auto;
 }
-/* Base */
 
-
+a{
+  text-decoration: none;
+  color: black;
+}
 
 /* Layout */
 
@@ -31,9 +34,15 @@ header {
   background-color: green;
 }
 
-.hamburger {
-  display: block;
-  width: auto;
+.main{
+  height: 100%;
+}
+
+/* Modules */
+
+#hamburger {
+  display: inline-block;
+  width: 100%;
   padding: 1em;
   color: black;
   font-size: 2em;
@@ -41,18 +50,19 @@ header {
   z-index: 100;
 }
 
-.main{
-  height: 100%;
-}
-
-/* Modules */
-
 .navButton {
+  font-size: 1em;
   display: none;
   padding: 1em;
+  margin: 0 auto;
 }
 
 /* State */
+
+.is-expanded {
+  display: block;
+  text-align: center;
+}
 
 /* Theme */
 
