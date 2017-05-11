@@ -2,7 +2,7 @@
 
 var projectData = [
   {
-    title: 'Bus Mall',
+    name: 'Bus Mall',
     author: 'Derek Farmer',
     created: '17 Apr 2017',
     gitUrl: 'https://github.com/vagabond0079/bus-mall',

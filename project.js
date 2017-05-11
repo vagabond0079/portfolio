@@ -18,10 +18,12 @@ Project.prototype.toHtml = function(){
   $newProject.find('h1').html(this.name);
   $newProject.find('.byline span').html(this.author);
   $newProject.find('time[pubdate]').attr('datetime', this.date);
+  $newProject.find('img').attr('src', this.imageUrl),
+  $newProject.find('h1 a').attr('href', this.gitUrl),
   $newProject.find('.description').html(this.description);
 
   return $newProject;
-}
+};
 
 projectData.forEach(function(projectObject){
   projects.push(new Project(projectObject));
