@@ -6,7 +6,23 @@ var projectData = [
     author: 'Derek Farmer',
     created: '17 Apr 2017',
     gitUrl: 'https://github.com/vagabond0079/bus-mall',
-    imageUrl: 'https://github.com/vagabond0079/bus-mall/blob/master/Screen%20Shot%202017-05-10%20at%2021.55.22.png?raw=true',
+    imageUrl: 'https://github.com/vagabond0079/bus-mall/blob/master/Bus-Mall-Logo.png?raw=true',
     description: 'Bus Mall is a sample product testing app for a hypothetical catalogue company testing products through a focus group. Three potential products are shown to each tester, who selects one by clicking on it. After twenty selections a chart is displayed with the number of votes each product has received both in nominal terms and as a percentage of votes cast, along with a link to a marketing report. Votes persist across multiple sessions.',
+  },
+  {
+    name: 'Gamer Connect',
+    author: 'Derek Farmer, Adan Rabadan, Oscar Cauich, John Scarrow',
+    created: '28 Apr 2017',
+    gitUrl: 'https://github.com/evilb4k4/LFG',
+    imageUrl: 'https://github.com/vagabond0079/LFG/blob/master/Gamer-Connect.png?raw=true',
+    description: 'Gamer Connect is a single-page app that allows gamers to find other gamers on their network to play with at specific times of the week. Users create a profile detailing their gamertag and avatar image, games they play, networks they play on, and days they game. Following login, all other players who fit the users criteria. User login persists across sessions until logout. Note this app is proof of concept only, and all players persist in local memory and therefore need to be created by the user in order to be displayed.'
+  },
+  {
+    name: 'Chocolate Pizza',
+    author: 'Derek Farmer, Joshua Evans, Alexis Yan',
+    created: '14 Apr 2017',
+    gitUrl: 'https://github.com/vagabond0079/chocolate-pizza',
+    imageUrl: 'https://github.com/vagabond0079/chocolate-pizza/blob/master/chocolate-pizza.png?raw=true',
+    description: 'Chocolate Pizza is a demo of our CSS styling capabilities. After receiving a photoshop mockup of a blog page for Vanessa Stevenson\'s \"Delicioius\" blog, we took the page from black text on a white screen to the attractive page you see here. The original photoshop mockup is in the github repo for comparison.'
   }
 ];

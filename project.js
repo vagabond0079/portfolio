@@ -11,18 +11,18 @@ function Project (projectObject){
   this.description = projectObject.description;
 }
 
-Project.prototype.toHtml = function(){
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
+// function Project (projectObject) {
+//   for (key in projectObject) {
+//     this[key] = projectObject[key];
+//   }
+// }
 
-  $newProject.find('h1').html(this.name);
-  $newProject.find('.byline span').html(this.author);
-  $newProject.find('time[pubdate]').attr('datetime', this.date);
-  $newProject.find('img').attr('src', this.imageUrl),
-  $newProject.find('h1 a').attr('href', this.gitUrl),
-  $newProject.find('.description').html(this.description);
+Project.prototype.toHtml = function() {
+  var template = $('#project-template').html();
+  var templateRender = Handlebars.compile(template);
+  this.daysAgo = parseInt((new Date() - new Date(this.date))/60/60/24/1000);
 
-  return $newProject;
+  return templateRender(this);
 };
 
 projectData.forEach(function(projectObject){
@@ -30,5 +30,5 @@ projectData.forEach(function(projectObject){
 });
 
 projects.forEach(function(project){
-  $('.projects').append(project.toHtml());
+  $('#projects').append(project.toHtml());
 });
