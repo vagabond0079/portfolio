@@ -1,0 +1,14 @@
+header {
+  background-color: green;
+}
+
+#my-name {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  font-size: 3em;
+}
+
+#hamburger{
+  float: right;
+}

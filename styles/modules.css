@@ -1,0 +1,50 @@
+
+#hamburger {
+  display: inline-block;
+  width: auto;
+  padding: 1em;
+  color: black;
+  font-size: .7em;
+  text-align: right;
+  z-index: 100;
+}
+
+header{
+  height: auto;
+}
+
+.navButton {
+  font-size: 2em;
+  display: none;
+  padding: .2em;
+}
+
+.project{
+  padding: 5%;
+}
+
+.project-image{
+  width: 100%;
+  height: auto;
+}
+
+.project .title-block a, h1{
+  display: inline-block;
+}
+
+.title-block{
+  padding-top: 1em;
+}
+
+.byline, p{
+  padding: 1em;
+}
+
+@media only screen and (min-width: 680px) {
+  #hamburger{
+    display: none;
+  }
+  .navButton {
+    display: inline-block;
+  }
+}

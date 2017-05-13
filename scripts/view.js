@@ -1,6 +1,6 @@
 'use strict';
 
-var projectView = [];
+var projectView = {};
 
 projectView.hamburgerMenu = function(){
   $('#hamburger').on('click', function(){
@@ -12,11 +12,11 @@ projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.navButton', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
-    $('#hamburger').click();
+    // $('#hamburger').click();
   });
 
   $('.main-nav .navButton:first').click();
-  $('#hamburger').click();
+  // $('#hamburger').click();
 };
 
 

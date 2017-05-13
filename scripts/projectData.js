@@ -19,7 +19,7 @@ var projectData = [
   },
   {
     name: 'Chocolate Pizza',
-    author: 'Derek Farmer, Joshua Evans, Alexis Yan',
+    author: 'Derek Farmer,<a href="https://github.com/skyfriends/">Joshua Evans</a>, Alexis Yan',
     created: '14 Apr 2017',
     gitUrl: 'https://github.com/vagabond0079/chocolate-pizza',
     imageUrl: 'https://github.com/vagabond0079/chocolate-pizza/blob/master/chocolate-pizza.png?raw=true',

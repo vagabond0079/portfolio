@@ -1,0 +1,8 @@
+.template {
+  display: none;
+}
+
+.is-expanded {
+  display: block;
+  text-align: center;
+}
