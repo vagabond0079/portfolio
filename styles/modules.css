@@ -22,13 +22,17 @@ header{
 }
 
 .my-name {
-  display: inline;
+  display: inline-block;
   text-align: center;
+  margin-left: 5%;
+  padding: 3%;
+  padding-bottom: 3%;
 }
 
 #hi {
   -webkit-animation-duration: 2s;
   -webkit-animation-name: slideinright;
+  -webkit-transform: translateX(15%);
 }
 
 #me{
@@ -57,7 +61,7 @@ header{
   text-align: center;
   padding-top: 6%;
   font-size: 1.8rem;
-  -webkit-animation-duration: 2.5s;
+  -webkit-animation-duration: 3.2s;
   -webkit-animation-name: slideinright;
   -webkit-transform: translateX(15%);
 }
@@ -83,7 +87,7 @@ header{
   text-align: center;
   padding-top: 6%;
   font-size: 1.8rem;
-  -webkit-animation-duration: 2.8s;
+  -webkit-animation-duration: 2.3s;
   -webkit-animation-name: slideinright;
   -webkit-transform: translateX(15%);
 }

@@ -17,18 +17,20 @@ projectView.home = function(){
   currentView = 'home';
 };
 
-projectView.hamburgerMenu = function(){
-  $('#hamburger').on('click', function(){
-    $('.navButton').toggleClass('is-expanded');
-  });
-};
+// projectView.hamburgerMenu = function(){
+//   $('#hamburger').on('click', function(){
+//     $('.navButton').delay(1000).toggleClass('is-expanded');
+//   });
+// };
 
-projectView.handleAboutClick = function() {
+projectView.handleMenuClick = function() {
   $('header').on('click', '#hamburger', function(){
-    console.log('clickie');
     if(currentView==='home'){
-      console.log('homie');
-      $('#home').animate({'marginTop': '20vh'}, 1500);
+      $('#home').animate({'marginTop': '15vh'}, 2000, 'swing', $('.navButton').delay(1000).toggleClass('is-expanded'));
+      currentView = 'menu';
+    }else{
+      $('#home').animate({'marginTop': '45vh'}, 2000, 'swing', $('.navButton').toggleClass('is-expanded'));
+      currentView = 'home';
     }
   });
 };
@@ -44,7 +46,7 @@ projectView.handleAboutClick = function() {
 
 $(document).ready(function() {
   projectView.home();
-  projectView.hamburgerMenu();
-  projectView.handleAboutClick();
+  // projectView.hamburgerMenu();
+  projectView.handleMenuClick();
   // projectView.handleMainNav();
 });
