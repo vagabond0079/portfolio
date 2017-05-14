@@ -28,7 +28,7 @@ projectView.handleAboutClick = function() {
     console.log('clickie');
     if(currentView==='home'){
       console.log('homie');
-      $('#home').animate('margin-top', '25vh');
+      $('#home').animate({'marginTop': '25vh'}, 2000);
     }
   });
 };
