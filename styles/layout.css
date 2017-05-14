@@ -21,5 +21,15 @@ header{
 }
 
 #home{
-  margin-top: 45vh;
+  margin-top: 30vh;
+  position: relative;
+}
+
+.verticalLine{
+  position: absolute;
+  top: 300%;
+  left: 21%;
+  width: 5%;
+  height: 500%;
+  background-color: #960F0F;
 }

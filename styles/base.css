@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  background-color: #4B83A5;
   /*border: 1px solid black;*/
 }
 
@@ -36,25 +37,27 @@ img, embed, object, video{
 
 /* ===== Fonts ===== */
 
-.my-name{
-  font-family: 'Gravitas One', cursive;
-  font-size: 24px; font-size: 2.4rem;
+*{
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+#hi{
+  font-size: 32px; font-size: 3.2rem;
+}
+
+#me{
+  font-size: 48px; font-size: 4.8rem;
+  font-weight: bold;
 }
 
 #hamburger{
-  font-size: 24px; font-size: 2.4rem;
-}
-
-header, h1{
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 32px; font-size: 3.2rem;
 }
 
 h1, title {
-  font-family: 'Cabin', sans-serif;
-  font-size: 24px; font-size: 2.4rem;
+  font-size: 32px; font-size: 3.2rem;
 }
 
 .byline, p {
-  font-family: 'Cabin', sans-serif;
-  font-size: 14px; font-size: 1.4rem;
+  font-size: 16px; font-size: 1.6rem;
 }

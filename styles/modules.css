@@ -12,7 +12,7 @@
     -webkit-transform: translateX(-200%);
   }
   to {
-    -webkit-transform: translateX(75%);
+    -webkit-transform: translateX(45%);
   }
 }
 
@@ -22,22 +22,25 @@ header{
 }
 
 .my-name {
-  display: inline-block;
-  text-align: center;
+  /*display: inline-block;*/
+  text-align: left;
   margin-left: 5%;
   padding: 3%;
   padding-bottom: 3%;
 }
 
 #hi {
+  color: #960F0F;
   -webkit-animation-duration: 2s;
   -webkit-animation-name: slideinright;
   -webkit-transform: translateX(15%);
 }
 
 #me{
+  background-color: rgba(0,0,0,0);
   width: 100%;
   overflow: hidden;
+  -webkit-transform: translateX(15%);
 }
 
 #hamburger {
@@ -51,16 +54,17 @@ header{
   display: none;
   padding: .2em;
   width: 80%;
+  height: 7%;
+  text-align: center;
+  padding-top: 2%;
+  font-size: 3.2rem;
 }
 
 #aboutmeButton{
   position: fixed;
-  top: 40%;
-  border: 2px solid red;
-  height: 10%;
-  text-align: center;
-  padding-top: 6%;
-  font-size: 1.8rem;
+  top: 45%;
+  background-color: #72B6DF;
+  z-index: 100;
   -webkit-animation-duration: 3.2s;
   -webkit-animation-name: slideinright;
   -webkit-transform: translateX(15%);
@@ -69,24 +73,17 @@ header{
 #projectsButton{
   position: fixed;
   top: 55%;
-  border: 2px solid green;
-  height: 10%;
-  text-align: center;
-  padding-top: 6%;
-  font-size: 1.8rem;
+  background-color: #176493;
   -webkit-animation-duration: 2.7s;
   -webkit-animation-name: slideinleft;
-  -webkit-transform: translateX(75%);
+  -webkit-transform: translateX(45%);
 }
 
 #homeButton{
   position: fixed;
-  top: 70%;
-  border: 2px solid blue;
-  height: 10%;
-  text-align: center;
-  padding-top: 6%;
-  font-size: 1.8rem;
+  top: 65%;
+  background-color: #14576E;
+  z-index: 100;
   -webkit-animation-duration: 2.3s;
   -webkit-animation-name: slideinright;
   -webkit-transform: translateX(15%);
