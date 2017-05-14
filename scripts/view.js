@@ -24,16 +24,16 @@ projectView.hamburgerMenu = function(){
 };
 
 projectView.handleAboutClick = function() {
-  $('.main-nav').on('click', '#aboutme', function(){
+  $('header').on('click', '#hamburger', function(){
     console.log('clickie');
     if(currentView==='home'){
       console.log('homie');
-      $('#home').animate({'marginTop': '25vh'}, 2000);
+      $('#home').animate({'marginTop': '20vh'}, 1500);
     }
   });
 };
 
-//
+
 // projectView.handleMainNav = function() {
 //   $('.main-nav').on('click', '.navButton', function() {
 //     $('.tab-content').hide();

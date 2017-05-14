@@ -7,8 +7,17 @@ header{
   float: left;
 }
 
+.main-nav{
+  height: 100%;
+  width: 25%;
+  display: inline;
+  float: left;
+  margin-left: -25%;
+}
 #main{
   height: 100vh;
+  padding-top: 1px;
+  margin-top: -1px;
 }
 
 #home{

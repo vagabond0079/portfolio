@@ -1,3 +1,21 @@
+@-webkit-keyframes slideinright {
+  from {
+    -webkit-transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(15%);
+  }
+}
+
+@-webkit-keyframes slideinleft {
+  from {
+    -webkit-transform: translateX(-200%);
+  }
+  to {
+    -webkit-transform: translateX(75%);
+  }
+}
+
 header{
   height: 10vh;
   width: 100%;
@@ -5,25 +23,17 @@ header{
 
 .my-name {
   display: inline;
-  padding: .5em;
   text-align: center;
 }
 
 #hi {
-  animation-duration: 2s;
-  animation-name: slidein;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slideinright;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+#me{
+  width: 100%;
+  overflow: hidden;
 }
 
 #hamburger {
@@ -36,8 +46,47 @@ header{
 .navButton {
   display: none;
   padding: .2em;
+  width: 80%;
 }
 
+#aboutmeButton{
+  position: fixed;
+  top: 40%;
+  border: 2px solid red;
+  height: 10%;
+  text-align: center;
+  padding-top: 6%;
+  font-size: 1.8rem;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: slideinright;
+  -webkit-transform: translateX(15%);
+}
+
+#projectsButton{
+  position: fixed;
+  top: 55%;
+  border: 2px solid green;
+  height: 10%;
+  text-align: center;
+  padding-top: 6%;
+  font-size: 1.8rem;
+  -webkit-animation-duration: 2.7s;
+  -webkit-animation-name: slideinleft;
+  -webkit-transform: translateX(75%);
+}
+
+#homeButton{
+  position: fixed;
+  top: 70%;
+  border: 2px solid blue;
+  height: 10%;
+  text-align: center;
+  padding-top: 6%;
+  font-size: 1.8rem;
+  -webkit-animation-duration: 2.8s;
+  -webkit-animation-name: slideinright;
+  -webkit-transform: translateX(15%);
+}
 .project{
   padding: 5%;
 }
