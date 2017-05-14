@@ -1,31 +1,45 @@
-
-#hamburger {
-  display: inline-block;
-  width: auto;
-  padding: 1em;
-  color: black;
-  font-size: .7em;
-  text-align: right;
-  z-index: 100;
+header{
+  height: 10vh;
+  width: 100%;
 }
 
-header{
-  height: auto;
+.my-name {
+  display: inline;
+  padding: .5em;
+  text-align: center;
+}
+
+#hi {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#hamburger {
+  display: inline;
+  margin-top: 3%;
+  margin-left: 2%;
+  text-align: right;
 }
 
 .navButton {
-  font-size: 2em;
   display: none;
   padding: .2em;
 }
 
 .project{
   padding: 5%;
-}
-
-.project-image{
-  width: 100%;
-  height: auto;
 }
 
 .project .title-block a, h1{
@@ -37,7 +51,7 @@ header{
 }
 
 .byline, p{
-  padding: 1em;
+  padding: .5em;
 }
 
 @media only screen and (min-width: 680px) {

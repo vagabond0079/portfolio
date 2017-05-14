@@ -1,14 +1,16 @@
-header {
-  background-color: green;
-}
-
-#my-name {
-  height: auto;
-  width: auto;
-  display: inline-block;
-  font-size: 3em;
+header{
+  position: fixed;
+  top: 0;
 }
 
 #hamburger{
-  float: right;
+  float: left;
+}
+
+#main{
+  height: 100vh;
+}
+
+#home{
+  margin-top: 45vh;
 }
