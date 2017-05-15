@@ -23,7 +23,7 @@ projectView.home = function(){
 //   });
 // };
 
-projectView.handleMenuClick = function() {
+projectView.handleHamburgerClick = function() {
   $('header').on('click', '#hamburger', function(){
     if(currentView==='home'){
       $('#home').animate({'marginTop': '15vh'}, 3200, 'swing', $('.navButton').delay(1000).toggleClass('is-expanded'));
@@ -38,18 +38,25 @@ projectView.handleMenuClick = function() {
   });
 };
 
+projectView.handleMainNav = function() {
+  $('.main-nav').on('click', '.navButton', function(){
+    $('.tab-content').hide();
+    $('.navButton').fadeOut();
+    $('#' + $(this).data('content')).fadeIn(2000);
+    currentView = 'aboutme';
+  });
 
-// projectView.handleMainNav = function() {
-//   $('.main-nav').on('click', '.navButton', function() {
-//     $('.tab-content').hide();
-//     $('#' + $(this).data('content')).fadeIn();
-//   });
-// };
+  // $('.main-nav').on('click', '.navButton', function() {
+  //   console.log('navclick');
+  //   $('.tab-content').hide();
+  //   $('#' + $(this).data('content')).fadeIn();
+  // });
+};
 
 
 $(document).ready(function() {
   projectView.home();
   // projectView.hamburgerMenu();
-  projectView.handleMenuClick();
-  // projectView.handleMainNav();
+  projectView.handleHamburgerClick();
+  projectView.handleMainNav();
 });
