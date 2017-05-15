@@ -1,14 +1,35 @@
-header {
-  background-color: green;
-}
-
-#my-name {
-  height: auto;
-  width: auto;
-  display: inline-block;
-  font-size: 3em;
+header{
+  position: fixed;
+  top: 0;
 }
 
 #hamburger{
-  float: right;
+  float: left;
+}
+
+.main-nav{
+  height: 100%;
+  width: 25%;
+  display: inline;
+  float: left;
+  margin-left: -25%;
+}
+#main{
+  height: 100vh;
+  padding-top: 1px;
+  margin-top: -1px;
+}
+
+#home{
+  margin-top: 30vh;
+  position: relative;
+}
+
+.verticalLine{
+  position: absolute;
+  top: 300%;
+  left: 21%;
+  width: 5%;
+  height: 500%;
+  background-color: #960F0F;
 }
