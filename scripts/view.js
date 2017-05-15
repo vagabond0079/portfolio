@@ -25,13 +25,18 @@ projectView.home = function(){
 
 projectView.handleHamburgerClick = function() {
   $('header').on('click', '#hamburger', function(){
-    if(currentView==='home'){
+    if($('#home').data('current')){
       $('#home').animate({'marginTop': '15vh'}, 3200, 'swing', $('.navButton').delay(1000).toggleClass('is-expanded'));
       $('.verticalLine').animate({'top': '-100%'}, 1800, 'swing');
       $('#hi').fadeTo(2000, 0);
       currentView = 'menu';
+
+//Kyle: Consider using a 'toast' menu rather than navigating back to the 'menu' page.
+//Kyle: Consider using a data-attribute for 'current' rather than a currentView variable and then adding/removing the class as necessary through jQuery.
+//Kyle: Could use multiple ifs or a switch to choose the page with the current data-attribute.
+
     }else{
-      $('#home').animate({'marginTop': '45vh'}, 3200, 'swing', $('.navButton').delay(1000).toggleClass('is-expanded'));
+      $('#home').animate({'marginTop': '30vh'}, 3200, 'swing', $('.navButton').delay(1000).toggleClass('is-expanded'));
       $('.verticalLine').animate({'top': '300%'}, 1800, 'swing');
       currentView = 'home';
     }
