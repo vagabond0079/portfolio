@@ -43,13 +43,14 @@
           <li href="#" id="homeButton" class="navButton" data-contenct="home">Home<li>
         </ul>
       </nav>
-      <div id="home" class="tab-content">
+      <div id="home" class="tab-content" data-current="true">
+        <!-- Kyle was here. -->
         <div class="verticalLine">
         </div>
       </div>
-      <div id="projects" class="tab-content">
+      <div id="projects" class="tab-content" data-current="false">
       </div>
-      <div id="aboutme" class="tab-content">
+      <div id="aboutme" class="tab-content" data-current="false">
         <h1>About Derek</h1>
         <p>Derek is a 2013 graduate of Seattle University's School of Theology and Ministry. After receiving his Master of Pastoral Studies, Derek and his wife Katy spent a year in Rome where he was a Russell Berrie Fellow for Interreligious Studies at the Pontifical University of St. Thomas Aquinas, known as the Angelicum.</p>
         <p>Prior to graduate school, Derek was an intelligence officer in the US Navy and was stationed in the United Kingdom, South Korea, and aboard the USS Monterey (CG-61) homeported in Norfolk, Virginia. He was the Field Director and Volunteer Coordinator for Mike McGinn's 2009 campaign for Mayor of Seattle and spent two years working for at City Hall in constituent relations.</p>
@@ -62,8 +63,9 @@
       crossorigin="anonymous"></script>
     <script src"scripts/transit.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="scripts/projectData.js" type="text/javascript"></script>
+    <!-- <script src="scripts/projectData.js" type="text/javascript"></script> -->
     <script src="scripts/project.js" type="text/javascript"></script>
     <script src="scripts/view.js" type="text/javascript"></script>
+    <script> Project.fetchAll(); </script>
   </body>
 </html>

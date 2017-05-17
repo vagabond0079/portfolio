@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 function Project (projectObject){
   this.name = projectObject.name;
   this.author = projectObject.author;
@@ -10,6 +8,8 @@ function Project (projectObject){
   this.imageUrl = projectObject.imageUrl;
   this.description = projectObject.description;
 }
+
+Project.all = [];
 
 // function Project (projectObject) {
 //   for (key in projectObject) {
@@ -25,10 +25,36 @@ Project.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-projectData.forEach(function(projectObject){
-  projects.push(new Project(projectObject));
-});
+// projectData.forEach(function(projectObject){
+//   projects.push(new Project(projectObject));
+// });
+//
+// Project.all.forEach(function(project){
+//   $('#projects').append(project.toHtml());
+// });
 
-projects.forEach(function(project){
-  $('#projects').append(project.toHtml());
-});
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.created)) - (new Date(a.created));
+  });
+
+  rawData.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  });
+};
+
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    projectView.initIndexPage();
+  } else {
+    $.getJSON('./data/projectData.json')
+      .then(function(rawData) {
+        localStorage.rawData = JSON.stringify(rawData);
+        Project.loadAll(rawData);
+        projectView.initIndexPage();
+      }, function(err) {
+        console.log(err);
+      });
+  }
+};
