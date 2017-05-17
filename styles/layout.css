@@ -25,6 +25,11 @@ header{
   position: relative;
 }
 
+#projects, #aboutme{
+  margin-top: 10vh;
+  position: relative;
+}
+
 .verticalLine{
   position: absolute;
   top: 300%;
