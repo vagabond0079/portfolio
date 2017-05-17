@@ -58,10 +58,13 @@ projectView.handleMainNav = function() {
   // });
 };
 
+projectView.initIndexPage = function(){
+  Project.all.forEach(function(project){
+    $('#projects').append(project.toHtml());
+  });
 
-$(document).ready(function() {
   projectView.home();
   // projectView.hamburgerMenu();
   projectView.handleHamburgerClick();
   projectView.handleMainNav();
-});
+};
