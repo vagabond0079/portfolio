@@ -38,13 +38,12 @@
     <div id="main" class=clear-fix>
       <nav class="main-nav">
         <ul>
-          <li href="#" id="projectsButton" class="navButton" data-content="projects">Projects</li>
-          <li href="#" id="aboutmeButton" class="navButton" data-content="aboutme">About Me</li>
-          <li href="#" id="homeButton" class="navButton" data-contenct="home">Home<li>
+          <li href="#" id="projectsButton" class="navButton" class="slideinright" data-content="projects">Projects</li>
+          <li href="#" id="aboutmeButton" class="navButton" class="slideinleft" data-content="aboutme">About Me</li>
+          <li href="#" id="homeButton" class="navButton"  class="slideinright" data-contenct="home">Home<li>
         </ul>
       </nav>
       <div id="home" class="tab-content" data-current="true">
-        <!-- Kyle was here. -->
         <div class="verticalLine">
         </div>
       </div>
@@ -63,9 +62,8 @@
       crossorigin="anonymous"></script>
     <script src"scripts/transit.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <!-- <script src="scripts/projectData.js" type="text/javascript"></script> -->
     <script src="scripts/project.js" type="text/javascript"></script>
     <script src="scripts/view.js" type="text/javascript"></script>
-    <script> Project.fetchAll(); </script>
+    <script> app.Project.fetchAll(); </script>
   </body>
 </html>
