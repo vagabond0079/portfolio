@@ -18,34 +18,7 @@ var app = app || {};
     $('#hi').fadeIn(2000);
     $('#me').delay(1800).fadeTo(6000, 100);
     $('#hamburger').delay(2000).fadeIn();
-    currentView = 'home';
-  };
-
-  projectView.handleHamburgerClick = function() {
-    $('header').on('click', '#hamburger', function(){
-      console.log('click');
-      if(currentView == 'home'){
-        $('#home').animate({'marginTop': '15vh'}, 3200, 'swing'),
-        $('.navButton').delay(1000).toggleClass('is-expanded');
-        $('.verticalLine').animate({'top': '-100%'}, 1800, 'swing');
-        $('#hi').fadeTo(2000, 0);
-        currentView = 'menu';
-
-      }else if (currentView == 'menu'){
-        $('#home').animate({'marginTop': '30vh'}, 3200, 'swing'),
-        $('.navButton').delay(1000).toggleClass('is-expanded');
-        $('.verticalLine').animate({'top': '300%'}, 1800, 'swing');
-        currentView = 'home';
-
-      }else{
-        $('.tab-content').hide();
-        $('#home').fadeIn(1000);
-        $('.verticalLine').animate({'top': '-100%'}, 1800, 'swing');
-        $('.navButton').delay(2000).toggleClass('is-expanded');
-
-        currentView = 'menu';
-      }
-    });
+    app.currentView = 'home';
   };
 
   projectView.initIndexPage = function(){
@@ -54,7 +27,7 @@ var app = app || {};
     });
 
     projectView.home();
-    projectView.handleHamburgerClick();
+    app.menuController.init();
     app.projectController.init();
     app.aboutController.init();
   };

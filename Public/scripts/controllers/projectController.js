@@ -5,7 +5,7 @@ var app = app || {};
   const projectController = {};
 
   projectController.init = function(){
-    $('.main-nav').on('click', '#projects', function(){
+    $('.main-nav').on('click', '#projectsButton', function(){
       $('.tab-content').hide();
       $('.navButton').toggleClass('is-expanded');
       $('.navButton').fadeOut();

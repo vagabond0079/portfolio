@@ -6,7 +6,7 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.init = function(){
-    $('.main-nav').on('click', '#about', function(){
+    $('.main-nav').on('click', '#aboutmeButton', function(){
       $('.tab-content').hide();
       $('.navButton').toggleClass('is-expanded');
       $('.navButton').fadeOut();
