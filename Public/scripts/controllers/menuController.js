@@ -7,9 +7,7 @@ var app = app || {};
 
   menuController.init = function() {
     $('header').on('click', '#hamburger', function(){
-      console.log('click');
       if(app.currentView == 'home'){
-        console.log('click on burger while home');
         $('#home').animate({'marginTop': '15vh'}, 3200, 'swing'),
         $('.navButton').delay(1000).toggleClass('is-expanded');
         $('.verticalLine').animate({'top': '-100%'}, 1800, 'swing');
