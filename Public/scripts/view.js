@@ -1,10 +1,12 @@
 'use strict';
 
+var app = app || {};
+
 (function(module){
 
-  var projectView = {};
+  let projectView = {};
 
-  var currentView = '';
+  let currentView = '';
 
   projectView.home = function(){
     $('.tab-content').hide();
