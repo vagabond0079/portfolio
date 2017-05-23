@@ -1,60 +1,57 @@
 'use strict';
 
-function Project (projectObject){
-  this.name = projectObject.name;
-  this.author = projectObject.author;
-  this.date = projectObject.date;
-  this.gitUrl = projectObject.gitUrl;
-  this.imageUrl = projectObject.imageUrl;
-  this.description = projectObject.description;
-}
+var app = app || {};
 
-Project.all = [];
+(function(module){
+  function Project (projectObject){
+    this.name = projectObject.name;
+    this.author = projectObject.author;
+    this.date = projectObject.date;
+    this.gitUrl = projectObject.gitUrl;
+    this.imageUrl = projectObject.imageUrl;
+    this.description = projectObject.description;
+  }
 
-// function Project (projectObject) {
-//   for (key in projectObject) {
-//     this[key] = projectObject[key];
-//   }
-// }
+  Project.all = [];
 
-Project.prototype.toHtml = function() {
-  var template = $('#project-template').html();
-  var templateRender = Handlebars.compile(template);
-  this.daysAgo = parseInt((new Date() - new Date(this.date))/60/60/24/1000);
+  Project.prototype.toHtml = function() {
+    var template = $('#project-template').html();
+    var templateRender = Handlebars.compile(template);
+    this.daysAgo = parseInt((new Date() - new Date(this.date))/60/60/24/1000);
 
-  return templateRender(this);
-};
+    return templateRender(this);
+  };
 
-// projectData.forEach(function(projectObject){
-//   projects.push(new Project(projectObject));
-// });
-//
-// Project.all.forEach(function(project){
-//   $('#projects').append(project.toHtml());
-// });
+  Project.numWordsAll = () => {
+    return Project.all.map(project => project.description.match(/\b\w+/g).length)
+    .reduce((a, b) => a + b);
+  };
 
-Project.loadAll = function(rawData) {
-  rawData.sort(function(a,b) {
-    return (new Date(b.created)) - (new Date(a.created));
-  });
+  Project.loadAll = function(rawData) {
+    rawData.sort(function(a,b) {
+      return (new Date(b.created)) - (new Date(a.created));
+    });
 
-  rawData.forEach(function(ele) {
-    Project.all.push(new Project(ele));
-  });
-};
+    rawData.forEach(function(ele) {
+      Project.all.push(new Project(ele));
+    });
+  };
 
-Project.fetchAll = function() {
-  if (localStorage.rawData) {
-    Project.loadAll(JSON.parse(localStorage.rawData));
-    projectView.initIndexPage();
-  } else {
-    $.getJSON('./data/projectData.json')
+  Project.fetchAll = function() {
+    if (localStorage.rawData) {
+      Project.loadAll(JSON.parse(localStorage.rawData));
+      app.projectView.initIndexPage();
+    } else {
+      $.getJSON('./data/projectData.json')
       .then(function(rawData) {
         localStorage.rawData = JSON.stringify(rawData);
         Project.loadAll(rawData);
-        projectView.initIndexPage();
+        app.projectView.initIndexPage();
       }, function(err) {
         console.log(err);
       });
-  }
-};
+    }
+  };
+
+  module.Project = Project;
+}(app));
