@@ -48,16 +48,6 @@ var app = app || {};
     });
   };
 
-  projectView.handleMainNav = function() {
-    $('.main-nav').on('click', '.navButton', function(){
-      $('.tab-content').hide();
-      $('.navButton').toggleClass('is-expanded');
-      $('.navButton').fadeOut();
-      $('#' + $(this).data('content')).fadeIn(2000);
-      currentView = $(this).data('content');
-    });
-  };
-
   projectView.initIndexPage = function(){
     app.Project.all.forEach(function(project){
       $('#projects').append(project.toHtml());
@@ -65,7 +55,8 @@ var app = app || {};
 
     projectView.home();
     projectView.handleHamburgerClick();
-    projectView.handleMainNav();
+    app.projectController.init();
+    app.aboutController.init();
   };
 
   module.projectView = projectView;
