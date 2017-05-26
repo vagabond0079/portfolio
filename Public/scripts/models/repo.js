@@ -8,11 +8,8 @@ var app = app || {};
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/user/repos',
+      url: '/github/user/repos',
       method: 'GET',
-      headers: {
-        Authorization: `token ${githubToken}`
-      }
     })
     .then(
       data => {
@@ -22,8 +19,6 @@ var app = app || {};
         callback();
       });
   };
-
-  repos.with = attr => repos.all.filter(repo => repo[attr]);
 
   module.repos = repos;
 })(app);
