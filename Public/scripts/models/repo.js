@@ -7,13 +7,18 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.get('/github/user/repos')
-    .then(data => repos.all = data, err => console.error(err))
-    .then(callback);
+    $.ajax({
+      url: '/github/user/repos',
+      method: 'GET',
+    })
+    .then(
+      data => {
+        data.forEach(repo => {
+          repos.all.push(repo);
+        });
+        callback();
+      });
   };
-
-
-  repos.with = attr => repos.all.filter(repo => repo[attr]);
 
   module.repos = repos;
 })(app);
