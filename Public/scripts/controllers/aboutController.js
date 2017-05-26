@@ -12,6 +12,7 @@ var app = app || {};
       $('.navButton').fadeOut();
       $('#' + $(this).data('content')).fadeIn(2000);
       app.currentView = $(this).data('content');
+      app.repos.requestRepos(app.repoView.index);
     });
   };
 
